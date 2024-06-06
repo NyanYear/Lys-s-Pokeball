@@ -1,0 +1,54 @@
+{
+	"schemaVersion": 1,
+	"id": "lyss-pokeball",
+	"version": "${version}",
+	"name": "Lys's PokeBall",
+	"description": "Lys's PokeBall",
+	"authors": [
+		"LysFleurs"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/lyss-pokeball/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "com.lysspokeball.LyssPokeBall",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "com.lysspokeball.LyssPokeBallClient",
+				"adapter": "kotlin"
+			}
+		],
+		"fabric-datagen": [
+			{
+				"value": "com.lysspokeball.LyssPokeBallDataGenerator",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"lyss-pokeball.mixins.json",
+		{
+			"config": "lyss-pokeball.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

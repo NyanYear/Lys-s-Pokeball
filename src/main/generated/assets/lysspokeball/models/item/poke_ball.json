@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "lysspokeball:item/poke_ball"
+  }
+}

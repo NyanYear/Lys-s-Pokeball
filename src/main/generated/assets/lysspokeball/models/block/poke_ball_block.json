@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "lysspokeball:block/poke_ball_block"
+  }
+}
